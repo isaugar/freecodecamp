@@ -18,7 +18,7 @@ pathStatic = __dirname + '/public';
 app.use("/public", express.static(pathStatic));
 
 app.get("/json", (req, res) => {
-  res.json({"message": "Hello json"})
+  res.json({"message": process.env.MESSAGE_STYLE="Hello json"})
 });
 
 //El archivo .env es un archivo oculto que se utiliza para pasar variables de entorno a la aplicación. Las variables de entorno son accesibles desde la aplicación como process.env.VAR_NAME
